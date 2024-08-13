@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind-Demo1</title>
+
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="../Frontend/imgs/🦆 icon _smart home_.svg" type="image/x-icon">
+
+    <!-- Custome css Link -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../Frontend/css/custom.css">
+    
+    <!-- GoogleFont link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- FontAwsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        img{
+            width: auto;
+            height: auto;
+        }
+    </style>
+
+</head>
+<body> 
+    <!-- Header Start -->
+    <div class="hidden header-info md:block bg-[#3A0CA3]">
+        <div class="container max-w-7xl w-full px-4">
+            <div class="flex w-full h-10 justify-between items-center">
+                <div href="#" class="address flex max-w-[227px] w-full h-4 my-auto text-white font-[poppins] text-[13.3px] leading-5 font-normal">
+                    <img src="../Frontend/imgs/🦆 icon _pin alt_.svg" class="pe-2" alt="Add_icon" width="100%" height="100%">
+                    Rezilla, 18 Grattan St, Brooklyn
+                </div>
+                <div class="flex max-w-80 w-full">
+                    <img src="../Frontend/imgs/🦆 icon _phone_.svg" class="pe-2" alt="Add_icon" width="30" height="50">
+                    <a href="tel:+1 206-214-2298" class="contact flex max-w-[227px] w-full h-4 my-auto text-white font-[poppins] text-[13.3px] leading-5 font-normal">
+                        +1 206-214-2298
+                    </a>
+                    <img src="../Frontend/imgs/🦆 icon _mail_.svg" class="pe-2" alt="Add_icon" width="30" height="50">
+                    <a href="mailto:support@rezilla.com" class="mails flex max-w-[227px] w-full h-5 my-auto text-white font-[poppins] text-[13.3px] leading-5 font-normal">
+                        support@rezilla.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header-nav md:flex bg-white">
+        <nav class="navbar container max-w-7xl w-full px-4">
+            <div class="flex justify-between items-center max-h-20 h-full">
+                <div class="flex py-5">
+                    <ul class="hidden lg:flex">
+                        <li class="flex items-start px-4 py-3 bg-indigo-300 rounded-3xl cursor-pointer"><a href="#" class="font-[poppins] text-[16px] font-medium leading-normal text-[#2B2B2B]">Home</a></li>
+                        <li class="flex items-start px-4 py-3 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer"><a href="#" class="font-[poppins] text-[16px] font-medium leading-normal text-[#2B2B2B]">About</a></li>
+                        <li class="flex items-start px-4 py-3 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer"><a href="#" class="font-[poppins] text-[16px] font-medium leading-normal text-[#2B2B2B]">Listing</a></li>
+                        <li class="flex items-start px-4 py-3 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer"><a href="#" class="font-[poppins] text-[16px] font-medium leading-normal text-[#2B2B2B]">Service</a></li>
+                        <li class="flex items-start px-4 py-3 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer"><a href="#" class="font-[poppins] text-[16px] font-medium leading-normal text-[#2B2B2B]">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="flex w-full lg:w-auto px-4 items-center py-10 lg:py-0 lg:flex-none font-semibold text-2xl font-[poppins] leading-normal">
+                    <div class="rounded-full bg-[#3A0CA3] text-white p-3 me-2 font-bold">
+                        <img src="../Frontend/imgs/reshot-icon-house-XJ53QBRVTC 1.svg" alt="House-logo" width="100%" height="100%" class="">
+                    </div>
+                    <a href="#">
+                        Rezilla
+                    </a>
+                </div>
+                <div class="hidden lg:flex">
+                    <div class="flex py-[15px] px-[26px]">
+                        <img src="../Frontend/imgs/🦆 icon _user circle alt_.svg" class="pe-2" alt="Add_icon" width="100%" height="100%">
+                        <a href="#" class="flex justify-center items-center font-[poppins] text-[16px] font-medium leading-normal text-[#2B2B2B] hover:text-[#3A0CA3]">Login/Register</a>
+                    </div>
+                    <div class="flex">
+                        <button class="flex justify-center items-center rounded-full bg-[#3A0CA3] text-white py-[15px] px-[26px] hover:rounded-xl">
+                            <img src="../Frontend/imgs/reshot-icon-house-XJ53QBRVTC 1.svg" class="pe-2" alt="House-logo" width="100%" height="100%">
+                            Add Listing
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu start -->
+                <div class="dropDown-menu lg:hidden flex px-4">
+                    <button class="focus:outline-none flex-none" id="menuToggle">
+                        <i class="fa-solid fa-bars fa-2xl"></i>
+                    </button>
+                </div>
+                <div class="lg:hidden fixed top-0 left-0 w-full h-auto bg-white bg-opacity-100 z-50 hidden" id="mobileMenu">
+                    <div class="mx-auto p-4">
+                        <ul class="flex flex-col items-start space-y-2 pt-16">
+                            <li><a href="#" class="flex items-start text-xl px-6 py-2 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer font-medium">Home</a></li>
+                            <li><a href="#" class="flex items-start text-xl px-6 py-2 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer font-medium">About</a></li>
+                            <li><a href="#" class="flex items-start text-xl px-6 py-2 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer font-medium">Listing</a></li>
+                            <li><a href="#" class="flex items-start text-xl px-6 py-2 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer font-medium">Service</a></li>
+                            <li><a href="#" class="flex items-start text-xl px-6 py-2 hover:bg-indigo-300 hover:rounded-3xl hover:cursor-pointer font-medium">Blogs</a></li>
+                        </ul>
+                        <div class="flex px-6 py-3">
+                            <a href="#" class="flex justify-center items-center font-[poppins] text-xl font-semibold leading-normal text-[#2B2B2B]"><img src="../Frontend/imgs/🦆 icon _user circle alt_.svg" class="pe-2" alt="Add_icon" width="100%" height="100%">Login/Register</a>
+                        </div>
+                        <div class="flex px-6 py-3">
+                            <button class="flex justify-center items-center rounded-full bg-[#3A0CA3] text-white py-[15px] px-[26px] text-xl"><img src="../Frontend/imgs/reshot-icon-house-XJ53QBRVTC 1.svg" class="pe-2" alt="House-logo" width="100%" height="100%"> Add Listing</button>
+                        </div>
+                    </div>
+                    <button class="mt-8 absolute top-0 right-0 py-0 px-10" id="closeMenu"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+                </div>
+                <!-- Mobile menu end -->
+
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero w-full bg-slate-500">
+        <div class="container max-w-6xl w-full pt-10 flex flex-col justify-center lg:justify-between items-center gap-5 lg:flex-row">
+            <div class="Hero-content mx-8">
+                <h4 class="font-[poppins] text-[19.4px] leading-normal font-medium text-[#4361EE] tracking-[2.91px]">REAL ESTATE</h4>
+                <h1 class="w-full pt-0 md:pt-8 font-[poppins] text-[30px] md:text-[57.3px] leading-normal md:leading-[65px] font-bold md:font-semibold tracking-normal md:tracking-[2.91px]">Find a perfect home you love..!</h1>
+                <p class="max-w-xl w-full py-5 md:py-10 font-[poppins] text-[12px] md:text-[16px] leading-6 font-medium md:font-normal text-[#808080] tracking-[2.91px]">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
+                <div class="relative max-w-[540px] w-full mx-auto lg:mx-0">
+                    <img src="../Frontend/imgs/bed.jpg" alt="BedRoom" class="max-w-[540px] w-full max-h-80 h-full rounded-[20px] mb-16" width="100%" height="100%">
+                    <img src="../Frontend/imgs/Herocircle1.svg" alt="Herocircle1" class="absolute right-0 -top-10 -z-10" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="form max-w-[420px] w-full py-5 bg-white rounded-3xl me-0 md:me-8">
+                <div class="Form Links">
+                    <ul class="flex w-full h-20 justify-around items-center">
+                        <li class="hover:border-b-2 active:hover:border-[#4361EE] active:hover:text-[#4361EE]">
+                            <a href="#" class="font-[poppins] text-[16px] font-medium leading-normal toggle-form" data-form="for-sale">For Sale</a>
+                        </li>
+                        <li class="hover:border-b-2 active:hover:border-[#4361EE] active:hover:text-[#4361EE]">
+                            <a href="#" class="font-[poppins] text-[16px] font-medium leading-normal toggle-form" data-form="for-rent">For Rent</a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+        
+                <!-- For Sale Form -->
+                <form class="form-content for-sale w-full m-0 md:m-auto px-4 md:px-10 active">
+                    <input type="text" placeholder="New York, San Francisco, etc" class="rounded-[20px] w-full mt-12 bg-slate-300 p-6" name="address">
+                    <select id="property-sale" name="property" autocomplete="property-name" class="rounded-[20px] w-full mt-7 bg-slate-300 p-6">
+                        <option>-- SELECT PROPERTY TYPE--</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>Mexico</option>
+                    </select>
+                    <select id="rooms-sale" name="property" autocomplete="property-name" class="rounded-[20px] w-full mt-7 bg-slate-300 p-6">
+                        <option>-- SELECT ROOMS --</option>
+                        <option>Luxurious</option>
+                        <option>Average</option>
+                        <option>Normal</option>
+                    </select>
+                </form>
+        
+                <!-- For Rent Form -->
+                <form class="form-content for-rent w-full m-0 md:m-auto px-4 md:px-10">
+                    <input type="text" placeholder="Address, etc" class="rounded-[20px] w-full mt-12 bg-slate-300 p-6" name="address">
+                    <select id="property-rent" name="property" autocomplete="property-name" class="rounded-[20px] w-full mt-7 bg-slate-300 p-6">
+                        <option>-- SELECT RENT --</option>
+                        <option>5000</option>
+                        <option>10000</option>
+                        <option>20000</option>
+                    </select>
+                </form>
+        
+                <div class="w-full m-auto px-10">
+                    <a href="#" class="w-full mt-7 px-2 flex">
+                        <img src="../Frontend/imgs/🦆 icon _setting 5_.svg" class="pe-2" alt="Setting_icon" width="400" height="300"> 
+                        <p class="text-[#3A0CA3] font-[poppins] text-[13.3px] leading-5 font-normal hover:text-[#4361EE]">Advance Search</p>
+                    </a>
+                    <button class="rounded-full w-full mt-10 p-6 bg-[#3A0CA3] flex justify-center items-center">
+                        <img src="../Frontend/imgs/🦆 icon _search normal 1_.svg" alt="Search-button" class="pe-2" width="400" height="300">
+                        <p class="font-[poppins] text-[16px] font-medium leading-normal text-white">Search</p>
+                    </button>
+                </div> 
+            </div>
+        </div>
+        <div class="hearoSection max-w-3xl w-full container flex flex-col md:flex-row justify-center gap-8 pt-14 md:pt-8 px-10 md:px-0">
+            <div class="box1 bg-white rounded-full flex items-center border-2 py-5 px-10 gap-10 md:gap-16 shadow-xl">
+                <div class="flex">
+                    <img src="../Frontend/imgs/c1.svg" alt="Customers1" class="-mx-3 md:-mx-2" width="400" height="300">
+                    <img src="../Frontend/imgs/c2.svg" alt="Customers2" class="-mx-3 md:-mx-2" width="400" height="300">
+                    <img src="../Frontend/imgs/c3.svg" alt="Customers3" class="-mx-3 md:-mx-2" width="400" height="300">
+                    <img src="../Frontend/imgs/c4.svg" alt="Customers4" class="-mx-3 md:-mx-2" width="400" height="300">
+                    <img src="../Frontend/imgs/c5.svg" alt="Customers5" class="-mx-3 md:-mx-2" width="400" height="300">
+                    <img src="../Frontend/imgs/c6.svg" alt="Customers6" class="-mx-3 md:-mx-2" width="400" height="300">
+                </div>
+                <p class="font-[poppins] font-medium text-[15px] md:text-[19.4px] leading-normal text-[#2B2B2B]">72k+ Happy Customers</p>
+            </div>
+            <div class="box2 bg-white rounded-full flex items-center border-2 py-5 px-10 gap-5 shadow-xl">
+                <img src="../Frontend/imgs/Ellipse 3.svg" alt="Listings-Stud" width="400" height="300">
+                <p class="font-[poppins] font-medium text-[15px] md:text-[19.4px] leading-normal text-[#2B2B2B]">200+ New Listings Everyday!</p>
+            </div>
+        </div><!--This are two box -->
+    </section>
+    
+    <div class="hidden lg:block companies-section relative w-full pt-10 mt-0 px-8">
+        <div class="flex max-w-6xl w-full container flex-col overflow-hidden slider">
+            <img src="../Frontend/imgs/compCircle2.svg" alt="compCircle2" class="absolute -top-10 left-[20%]">
+            <p class="font-[poppins] text-[16px] leading-6 font-normal pb-[19px] text-[#808080] tracking-[2.91px] text-center">Trusted by 100+ Companies across the globe!</p>
+    
+            <div class="comp-logo animate-anim flex justify-between items-center w-full ps-5 py-10" id="logo-slider">
+                <a href="#"><img src="../Frontend/imgs/image 1.svg" alt="Google"></a>
+                <a href="#"><img src="../Frontend/imgs/image 2.svg" alt="Amazon"></a>
+                <a href="#"><img src="../Frontend/imgs/image 3.svg" alt="Logitech"></a>
+                <a href="#"><img src="../Frontend/imgs/image 4.svg" alt="Spotify"></a>
+                <a href="#"><img src="../Frontend/imgs/image 5.svg" alt="Samsung"></a>
+                <a href="#"><img src="../Frontend/imgs/image 6.svg" alt="Netflix"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- Who are we Section start -->
+    <section class="Who-are-we w-full h-full mt-20 md:mt-44 mb-8">
+        <div class="container max-w-6xl w-full h-full pt-10 flex flex-col gap-11 px-8 lg:flex-row">
+            <div class="Hero-content w-full">
+                <h4 class="font-[poppins] text-[19.4px] leading-normal font-medium text-[#4361EE] tracking-[2.91px]">WHO ARE WE</h4>
+                <h2 class="w-full pt-2 md:pt-8 font-[poppins] text-[30px] md:text-[39.3px] leading-normal md:leading-none font-bold md:font-semibold tracking-normal md:tracking-[2.91px]">Assisting individuals in locating the appropriate real estate.</h2>
+                <p class="w-full py-5 md:py-10 font-[poppins] text-[12px] md:text-[16px] leading-6 font-medium md:font-normal text-[#808080] tracking-[2.91px]">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.</p>
+                <div class="max-w-[400px] w-full mx-auto lg:mx-0 smart-home bg-white rounded-xl md:rounded-full flex items-center py-5 px-5 md:px-10 gap-5 shadow-xl mb-8">
+                    <img src="../Frontend/imgs/🦆 icon _smart home_.svg" alt="smart Home" width="400" height="300">
+                    <div>
+                        <p class="text-[#4361EE] font-[poppins] text-[16px] md:text-[19.4px] font-medium leading-normal">Donec porttitor euismod</p>
+                        <p class="font-[poppins] font-normal text-sm md:text-[16px] leading-6 text-[#808080] pt-1 md:pt-3">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+                    </div>
+                </div>
+                <div class="max-w-[400px] w-full mx-auto lg:mx-0 smart-home bg-white rounded-xl md:rounded-full flex items-center py-5 px-5 md:px-10 gap-5 shadow-xl">
+                    <img src="../Frontend/imgs/🦆 icon _user octagon_.svg" alt="User-profile" width="400" height="300">
+                    <div>
+                        <p class="text-[#4361EE] font-[poppins] text-[16px] md:text-[19.4px] font-medium leading-normal">Donec porttitor euismod</p>
+                        <p class="font-[poppins] font-normal text-sm md:text-[16px] leading-6 text-[#808080] pt-1 md:pt-3">Nullam a lacinia ipsum, nec dignissim purus. Nulla</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:max-w-[577px] w-full mx-auto mb-10 bg-white relative">
+                <img src="../Frontend/imgs/circlText.svg" alt="circlText" class="absolute top-0 left-1/3 z-10 w-[40%] animate-spin hover:animate-none" width="400" height="300">
+                <div class="md:max-w-[577px] w-full md:mx-auto bg-white flex gap-5 pt-12 pb-5 md:pt-24">
+                    <div class="relative md:max-w-[280px] w-full flex items-center md:items-end">
+                        <img src="../Frontend/imgs/pool-WhoWeAre.jpg" alt="pool-WhoWeAre" class="absolute top-0 md:top-20 rounded-3xl object-cover h-full" width="400" height="300">
+                    </div>
+                    <div class="md:max-w-[277px] w-full flex flex-col gap-y-5 justify-center relative">
+                        <img src="../Frontend/imgs/Bed-WWR.jpg" alt="Bed-WWR" class="rounded-3xl">
+                        <img src="../Frontend/imgs/Sofa-WWR.jpg" alt="Sofa-WWR" class="rounded-3xl">
+                        <img src="../Frontend/imgs/Circle-WWR.svg" alt="Circle-WWR" class="hidden md:block absolute top-[95%] left-1/4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Who are we Section end -->
+
+    <!-- Our Service Section Start -->
+    <section class="our-service-section w-full my-0 md:my-40 text-center flex justify-center items-center relative bg-opacity-30 bg-[#D4D4D4]">
+        <div class="container max-w-6xl w-full px-8">
+            <div class="Our-service-headings pt-24">
+                <h4 class="font-[poppins] text-[19.4px] leading-normal font-medium text-[#2B2B2B] tracking-[2.91px]">OUR SERVICES</h4>
+                <h2 class="w-full pt-2 md:pt-8 font-[poppins] text-[30px] md:text-[37.3px] leading-normal md:leading-none font-bold md:font-semibold tracking-normal md:tracking-[2.91px]">Donec porttitor euismod dignissim</h2>
+            </div>
+            <div class="our-service-cards flex flex-col md:flex-row justify-evenly gap-12 items-center pb-32 pt-14">
+                <div class="card1 bg-white shadow-xl rounded-3xl py-14 hover:shadow-2xl hover:shadow-indigo-700">
+                    <div class="card1-logo rounded-full bg-indigo-700 w-24 h-24 m-auto relative hover:cursor-pointer shadow-2xl">
+                        <a href="#"><img src="../Frontend/imgs/🦆 icon _search_.svg" alt="search-icon" class="absolute top-7 left-7" width="400" height="300"></a>
+                    </div> 
+                    <div class="card1-content">
+                        <h4 class="font-[poppins] text-[#2B2B2B] font-medium leading-normal text-[19.4px] pt-7">Buy a New Home</h4>
+                        <p class="font-[poppins] text-[#808080] font-normal leading-6 text-[16px] px-10 lg:px-14 pt-5">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+                    </div>     
+                </div>
+                <div class="card2 bg-white shadow-xl rounded-3xl py-14 hover:shadow-2xl hover:shadow-indigo-700">
+                    <div class="card1-logo rounded-full bg-indigo-700 w-24 h-24 m-auto relative hover:cursor-pointer shadow-2xl">
+                        <a href="#"><img src="../Frontend/imgs/🦆 icon _home_.svg" alt="home-icon" class="absolute  top-6 left-7" width="400" height="300"></a>
+                    </div> 
+                    <div class="card1-content">
+                        <h4 class="font-[poppins] text-[#2B2B2B] font-medium leading-normal text-[19.4px] pt-7">Sell a House</h4>
+                        <p class="font-[poppins] text-[#808080] font-normal leading-6 text-[16px] px-10 lg:px-14 pt-5">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+                    </div>     
+                </div>
+                <div class="card3 bg-white shadow-xl rounded-3xl py-14 hover:shadow-2xl hover:shadow-indigo-700">
+                    <div class="card1-logo rounded-full bg-indigo-700 w-24 h-24 m-auto relative hover:cursor-pointer shadow-2xl">
+                        <a href="#"><img src="../Frontend/imgs/🦆 icon _bed_.svg" alt="bed-icon" class="absolute top-7 left-7" width="400" height="300"></a>
+                    </div> 
+                    <div class="card1-content">
+                        <h4 class="font-[poppins] text-[#2B2B2B] font-medium leading-normal text-[19.4px] pt-7">Rent a House</h4>
+                        <p class="font-[poppins] text-[#808080] font-normal leading-6 text-[16px] px-10 lg:px-14 pt-5">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <img src="../Frontend/imgs/Herocircle1.svg" alt="Herocircle1" class="absolute top-[98%] left-[45%]" width="400" height="300">
+    </section>
+    <!-- Our Service Section end -->
+
+    <!-- Gallery section start -->
+    <section class="gallery-section w-full">
+        <div class="container max-w-6xl w-full px-8 relative">
+            <div class="gallery-heading py-20">
+                <h4 class="font-[poppins] text-[16px] md:text-[19.4px] leading-normal font-medium text-[#4361EE] tracking-[2.91px]">AREAS ACROSS THE TOWN</h4>
+                <h2 class="w-full pt-2 md:pt-8 font-[poppins] text-[30px] md:text-[37.3px] leading-normal md:leading-none font-bold md:font-semibold tracking-normal md:tracking-[2.91px]">Neighborhood Properties</h2>
+            </div>
+            <div class="galary-photos grid grid-cols-6 md:grid-cols-12 w-full gap-2 md:gap-12 pb-52">
+                <div class="col-span-3 md:col-span-3 h-full md:h-80 relative bg-gradient-to-b from-white from-0%  via-slate-500 via-30% to-black to-70% rounded-2xl md:rounded-3xl overflow-hidden">
+                    <a href="#"><img src="../Frontend/imgs/gallery1.jpg" alt="Gallery1" class="rounded-2xl md:rounded-3xl object-cover h-full w-full opacity-80 hover:scale-110 " width="400" height="300"></a>
+                    <h3 class="absolute bottom-2 md:bottom-16 left-2 md:left-10 text-white text-[30px] md:text-[57.3px] font-[poppins] font-semibold leading-[65px] opacity-60">216</h3>
+                    <h4 class="absolute bottom-3 md:bottom-8 left-2 md:left-10 text-white font-[poppins] text-[70%] md:text-[19.4px] font-medium leading-normal">New York City, NY</h4>
+                </div>
+                <div class="col-span-3 md:col-span-3 h-full md:h-80 relative bg-gradient-to-b from-white from-0%  via-slate-500 via-30% to-black to-70% rounded-2xl md:rounded-3xl overflow-hidden">
+                    <a href="#"><img src="../Frontend/imgs/gallery2.jpg" alt="Gallery2" class="rounded-2xl md:rounded-3xl object-cover h-full w-full opacity-80 hover:scale-110 " width="400" height="300"></a>
+                    <h3 class="absolute bottom-2 md:bottom-16 left-2 md:left-10 text-white text-[30px] md:text-[57.3px] font-[poppins] font-semibold leading-[65px] opacity-60">141</h3>
+                    <h4 class="absolute bottom-3 md:bottom-8 left-2 md:left-10 text-white font-[poppins] text-[70%] md:text-[19.4px] font-medium leading-normal">Houston, TX</h4>
+                </div>
+                <div class="col-span-3 md:col-span-6 h-full md:h-80 relative bg-gradient-to-b from-white from-0%  via-slate-500 via-30% to-black to-70% rounded-2xl md:rounded-3xl overflow-hidden">
+                    <a href="#"><img src="../Frontend/imgs/gallery3.jpg" alt="Gallery3" class="rounded-2xl md:rounded-3xl object-cover h-full w-full opacity-80 hover:scale-110 " width="400" height="300"></a>
+                    <h3 class="absolute bottom-2 md:bottom-16 left-2 md:left-10 text-white text-[30px] md:text-[57.3px] font-[poppins] font-semibold leading-[65px] opacity-60">212</h3>
+                    <h4 class="absolute bottom-3 md:bottom-8 left-2 md:left-10 text-white font-[poppins] text-[70%] md:text-[19.4px] font-medium leading-normal">San Diego, CA</h4>
+                </div>
+                <div class="col-span-3 md:col-span-4 h-full md:h-80 relative bg-gradient-to-b from-white from-0%  via-slate-500 via-30% to-black to-70% rounded-2xl md:rounded-3xl overflow-hidden">
+                    <a href="#"><img src="../Frontend/imgs/gallery4.jpg" alt="galary-photos3" class="rounded-2xl md:rounded-3xl object-cover h-full w-full opacity-80 hover:scale-110 " width="400" height="300"></a>
+                    <h3 class="absolute bottom-2 md:bottom-16 left-2 md:left-10 text-white text-[30px] md:text-[57.3px] font-[poppins] font-semibold leading-[65px] opacity-60">183</h3>
+                    <h4 class="absolute bottom-3 md:bottom-8 left-2 md:left-10 text-white font-[poppins] text-[70%] md:text-[19.4px] font-medium leading-normal">Philadelphia, PA</h4>
+                </div>
+                <div class="col-span-3 md:col-span-8 h-full md:h-80 relative bg-gradient-to-b from-white from-0%  via-slate-500 via-30% to-black to-70% rounded-2xl md:rounded-3xl overflow-hidden">
+                    <a href="#"><img src="../Frontend/imgs/gallery5.jpg" alt="Gallery5" class="rounded-2xl md:rounded-3xl object-cover h-full w-full opacity-80 hover:scale-110 " width="400" height="300"></a>
+                    <h3 class="absolute bottom-2 md:bottom-16 left-2 md:left-10 text-white text-[30px] md:text-[57.3px] font-[poppins] font-semibold leading-[65px] opacity-60">112</h3>
+                    <h4 class="absolute bottom-3 md:bottom-8 left-2 md:left-10 text-white font-[poppins] text-[70%] md:text-[19.4px] font-medium leading-normal">San Francisco, CA</h4>
+                </div>
+            </div>
+            <img src="../Frontend/imgs/compCircle2.svg" alt="compCircle2" class="absolute right-20 bottom-10 animate-zoom-in-out infinite" width="400" height="300">
+        </div>
+    </section>
+    <!-- Gallery section end -->
+
+    <!-- Out Team section start -->
+    <section class="team-section h-full text-center flex flex-wrap justify-center items-center">
+        <div class="container max-w-6xl w-full px-8">
+            <div class="Our-team-headings pt-10 md:pt-5">
+                <h4 class="font-[poppins] text-[16px] md:text-[19.4px] leading-normal font-medium text-[#4361EE] tracking-[2.91px] uppercase">Introduce yourself to </h4>
+                <h2 class="w-full pt-2 md:pt-8 font-[poppins] text-[30px] md:text-[37.3px] leading-normal md:leading-none font-bold md:font-semibold tracking-normal md:tracking-[2.91px]">Our Team of Experts</h2>
+            </div>
+            <div class="our-service-cards flex flex-wrap h-[577] justify-evenly gap-12 items-center pb-32 pt-12 md:pt-24">
+                <div class="flex flex-col max-w-[214px] gap-y-5">
+                    <img src="../Frontend/imgs/team1.jpg" alt="team1" class="w-full h-[280px] object-cover rounded-tl-[120PX] rounded-b-[40px] rounded-tr-[40px]" width="400" height="300">    
+                    <h3 class="font-[poppins] text-[27.6px] font-semibold leading-normal">Brendon M</h3>
+                    <a href="#" class="text-[#4361EE] font-[poppins] text-[16px] font-medium leading-normal">CEO & Founder</a>
+                </div>
+                <div class="flex flex-col max-w-[214px] gap-y-5">
+                    <img src="../Frontend/imgs/team2.jpg" alt="team2" class="w-full h-[280px] object-cover rounded-tl-[120PX] rounded-b-[40px] rounded-tr-[40px]" width="400" height="300">    
+                    <h3 class="font-[poppins] text-[27.6px] font-semibold leading-normal">Jodi J. Appleby</h3>
+                    <a href="#" class="text-[#4361EE] font-[poppins] text-[16px] font-medium leading-normal">Real Estate Developer</a>
+                </div>
+                <div class="flex flex-col max-w-[214px] gap-y-5">
+                    <img src="../Frontend/imgs/team3.jpg" alt="team3" class="w-full h-[280px] object-cover rounded-tl-[120PX] rounded-b-[40px] rounded-tr-[40px]" width="400" height="300">    
+                    <h3 class="font-[poppins] text-[27.6px] font-semibold leading-normal">Justin S. Meza</h3>
+                    <a href="#" class="text-[#4361EE] font-[poppins] text-[16px] font-medium leading-normal">Listing Agent</a>
+                </div>
+                <div class="flex flex-col max-w-[214px] gap-y-5">
+                    <img src="../Frontend/imgs/team4.jpg" alt="team4" class="w-full h-[280px] object-cover rounded-tl-[120PX] rounded-b-[40px] rounded-tr-[40px]" width="400" height="300">    
+                    <h3 class="font-[poppins] text-[27.6px] font-semibold leading-normal">Susan T. Smith</h3>
+                    <a href="#" class="text-[#4361EE] font-[poppins] text-[16px] font-medium leading-normal">Buyer's Agent</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Out Team section end -->
+
+    <!-- Blog section start -->
+    <section class="blog-section w-full mb-20 md:mb-56 bg-[#3A0CA3] text-center flex flex-row md:flex-col justify-center items-center relative">
+       
+            <div class="container max-w-6xl w-full px-8">
+                <div class="blog-headings py-20">
+                    <h4 class="font-[poppins] text-[19.4px] leading-normal font-medium text-white tracking-[2.91px]">WHAT’S TRENDING</h4>
+                    <h2 class="pt-8 font-[poppins] text-white text-[39.3px] leading-[47px] font-semibold ">Latest Blogs & Posts</h2>
+                </div>
+                <div class="blog-accordian pb-20 grid grid-rows-2 grid-cols-6 md:grid-rows-1 md:grid-cols-12 gap-10">
+                    <div class="col-span-6 rounded-3xl">
+                        <div class="space-y-4 h-full flex flex-col justify-center rounded-3xl">
+                            <div class="group flex h-full flex-col gap-2 rounded-t-3xl bg-black p-5 text-white text-start active-tab" tabindex="1">
+                                <div class="flex cursor-pointer justify-between">
+                                    <h3 class="font-[poppins] leading-normal font-medium text-xl"> Top 10 Home Buying Mistakes to Avoid </h3>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+                                    class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180" width="400" height="300"/>
+                                </div>
+                                <div class="invisible h-auto max-h-0 opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 border-t-2 border-white">
+                                    <p class="text-[#D4D4D4] font-[poppins] text-sm font-normal leading-7 w-full">
+                                        Etiam eget elementum elit. Aenean dignissim dapibus vestibulum
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="group flex h-full flex-col gap-2 bg-black p-5 text-white text-start" tabindex="2">
+                                <div class="flex cursor-pointer items-center justify-between">
+                                    <h3 class="font-[poppins] leading-normal font-medium text-xl"> How to Stage Your Home for a Quick Sale </h3>
+                                    <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+                                    class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180" width="400" height="300"
+                                    />
+                                </div>
+                                <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 border-t-2 border-white">
+                                    <p class="text-[#D4D4D4] font-[poppins] text-sm font-normal leading-7 h-full w-full">
+                                        Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <div class="group flex h-full flex-col gap-2 rounded-b-3xl bg-black p-5 text-white text-start" tabindex="3">
+                                <div class="flex cursor-pointer items-center justify-between">
+                                    <h3 class="font-[poppins] leading-normal font-medium text-xl"> 5 Tips for First-Time Home Sellers </h3>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
+                                    class="h-2 w-3 transition-all duration-500 group-focus:-rotate-180" width="400" height="300"/>
+                                </div>
+                                <div class="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 border-t-2 border-white">
+                                    <p class="text-[#D4D4D4] font-[poppins] text-sm font-normal leading-7">
+                                        In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-6">
+                        <div class="relative bg-gradient-to-b from-slate-500 h-full from-10% to-black to-90% rounded-3xl" id="img1">
+                            <img src="../Frontend/imgs/blog1.jpg" alt="blog1" class="rounded-3xl h-full object-cover opacity-80" width="400" height="300">
+                            <div class="absolute bg-white data top-0 left-16 p-3 rounded-b-2xl">
+                                <h3 class="text-[27.4px] h-8 font-[poppins] font-semibold leading-normal">28</h3>
+                                <h4 class="font-[poppins] text-[19.4] text-[#808080] font-medium leading-normal">Tue</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="relative hidden bg-gradient-to-b h-full from-slate-500 from-10% to-black to-90% rounded-3xl" id="img2">
+                            <img src="../Frontend/imgs/blog2.jpg" alt="blog1" class="rounded-3xl h-full object-cover opacity-80" width="400" height="300">
+                            <div class="absolute bg-white data top-0 left-16 p-3 rounded-b-2xl">
+                                <h3 class="text-[27.4px] h-8 font-[poppins] font-semibold leading-normal">08</h3>
+                                <h4 class="font-[poppins] text-[19.4] text-[#808080] font-medium leading-normal">Mon</h4>
+                            </div>
+                        </div>
+
+                        <div class="relative hidden bg-gradient-to-b from-slate-500 h-full from-10% to-black to-90% rounded-3xl" id="img3">
+                            <img src="../Frontend/imgs/blog3.jpg" alt="blog1" class="rounded-3xl h-full object-cover opacity-80" width="400" height="300">
+                            <div class="absolute bg-white data top-0 left-16 p-3 rounded-b-2xl">
+                                <h3 class="text-[27.4px] h-8 font-[poppins] font-semibold leading-normal">26</h3>
+                                <h4 class="font-[poppins] text-[19.4] text-[#808080] font-medium leading-normal">Wed</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+    <!-- Blog section end -->
+
+    <!-- Register Section start -->
+    <section class="register-section my-10 md:my-20 px-8">
+        <div class="container rounded-[40px] max-w-7xl w-full bg-[#3A0CA3] relative">
+            <div class="flex flex-col-reverse gap-5 lg:gap-0 lg:flex-row h-auto lg:h-[260px] items-start lg:items-center justify-evenly mx-auto p-5">     
+                <div class="order-1 md:order-none max-w-2xl -mx-0 -mt-5 -mb-10 lg:-mx-60 md:-my-20 relative">
+                    <img src="../Frontend/imgs/register.jpg" alt="register" class="h-full w-full relative shrink-0 z-20" width="400" height="300">
+                    <img src="../Frontend/imgs/regCircle1.svg" alt="regCircle1" class="absolute top-1/2 right-32 z-10" width="400" height="300">
+                </div>  
+                <div class="order-3 md:order-none Register-content flex flex-col max-w-[344px] w-full gap-y-8">
+                    <h2 class="font-[poppins] text-[39.3px] leading-[47px] font-semibold text-white">Become a Agent.</h2>
+                    <p class="font-[poppins] text-[16px] leading-6 font-normal text-white">Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque.</p>
+                </div>
+                <div class="order-2 md:order-none">
+                    <button class="rounded-full text-[#3A0CA3] font-semibold tracking-[1.19px] bg-white py-3 lg:py-[19px] px-5 lg:px-[30px] hover:bg-[#3A0CA3] hover:text-white hover:border-2 hover:border-white">Register Now</button>
+                </div>
+                <img src="../Frontend/imgs/regCircle.svg" alt="regCircle" class="absolute right-10 -top-10" width="400" height="300">
+            </div>
+        </div>
+        <div class="h-[100px] bg-white relative z-50"></div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="footer-section w-full bg-[#4361EE] bg-opacity-10">
+        <div class="footer-main-box container max-w-7xl w-full py-14 px-8">
+            <div class="flex flex-col gap-y-10 justify-evenly items-start lg:gap-y-0 md:flex-row md:justify-between">
+                <div class="footer-info flex flex-col items-start gap-y-5">
+                    <div class="flex justify-start items-center py-0 lg:py-10 lg:flex-none font-semibold text-xl font-[poppins] leading-normal">
+                        <div class="flex justify-center items-center rounded-full bg-[#3A0CA3] text-white p-3 me-2 font-bold">
+                            <img src="../Frontend/imgs/reshot-icon-house-XJ53QBRVTC 1.svg" alt="House-logo" width="100%" height="100%" class="">
+                        </div>
+                        <a href="#">
+                            Rezilla
+                        </a>
+                    </div>
+                    <a href="#" class="font-[poppins] w-2/3 text-[16px] font-medium leading-normal text-[#2B2B2B]">2728 Hickory StreetSalt Lake City, UT 84104</a>
+                    <a href="#" class="font-[poppins] w-2/3 text-[16px] font-medium flex leading-normal text-[#2B2B2B]"><img src="../Frontend/imgs/🦆 icon _phone_.svg" class="pe-2 filter invert" alt="Phone-no" width="400" height="300"> +1 206-214-2298</a>
+                    <a href="#" class="font-[poppins] text-[16px] font-medium w-2/3 flex leading-normal text-[#2B2B2B]"><img src="../Frontend/imgs/🦆 icon _mail_.svg" class="pe-2 filter invert" alt="Mail" width="400" height="300"> support@rezilla.com</a>
+                </div>
+                <div class="Quick-links hidden lg:block">
+                    <h4 class="font-[poppins] text-[19.4px] font-medium leading-normal text-[#0B090A] pb-2">Quick Links</h4>
+                    <ul>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Home</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">About</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Listings</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Services</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Blogs</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Became a Agent</a></li>
+                    </ul>
+                </div>
+                <div class="Discovery hidden lg:block">
+                    <h4 class="font-[poppins] text-[19.4px] font-medium leading-normal text-[#0B090A] pb-2">Discovery</h4>
+                    <ul>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">India</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Canada</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">USA</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Africa</a></li>
+                        <li><a href="#" class="font-[poppins] text-[#2B2B2B] text-[16px] font-normal leading-6">Germany</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-y-10">
+                    <div class="subscription">
+                        <h4 class="font-[poppins] text-[19.4px] font-medium leading-normal text-[#0B090A] pb-4">Subscribe to our Newsletter!</h4>
+                        <div class="relative">
+                            <input type="text" class="w-full bg-white rounded-full py-[12.5px] ps-3" placeholder="Email address">
+                            <button class="rounded-full bg-[#3A0CA3] hover:bg-blue-700 absolute top-1 right-1 p-3"><img src="../Frontend/imgs/Arrow 2.svg" alt="Arrow-button" class="w-full h-full" width="400" height="300"></button>
+                        </div>
+                    </div>
+                    <div class="social-links flex flex-col gap-y-3">
+                        <h4 class="font-[poppins] text-[19.4px] font-medium leading-normal text-[#0B090A] pb-2">Follow Us on</h4>
+                        <div class="sm flex gap-5">
+                            <a href="#" class="text-[#3A0CA3] hover:text-blue-900"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
+                            <a href="#" class=" text-[#3A0CA3] hover:text-blue-700"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                            <a href="#" class="text-[#3A0CA3] hover:text-purple-700"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer-policy bg-black text-[#AAA] py-5 px-4">
+            <div class="container max-w-7xl w-full flex justify-between">
+                <p class="text-center w-full md:w-auto md:text-start">© Rezilla – All rights reserved</p>
+                <div class="f-box hidden md:flex gap-10">
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    
+    <!-- Custome Js link -->
+    <script src="../Frontend/JS/script.js"></script>
+</body>
+</html>

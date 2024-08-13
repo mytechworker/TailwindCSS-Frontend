@@ -1,0 +1,73 @@
+/* Hero Section start */
+.hero{
+  padding: 100px 0;
+  background: url(../imgs/Rectangle\ 4.png) no-repeat;
+  background-size: 100% 87%;
+}
+.form-content {
+  display: none;
+}
+.form-content.active {
+  display: block;
+}
+/* Hero Section start */
+
+/* Header start */
+.header-nav {
+  transition: background-color 0.3s ease;
+}
+#fixed-top {
+  position: fixed;
+  height: 80px;
+  background-color: white;
+  z-index: 111;
+  top: 0;
+  width: 100%;
+}
+/* Header end */
+
+/* Animation of comp */
+@keyframes anim {
+  0% {
+		transform: translateX(100%)
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+.animate-anim{
+  animation: anim 15s linear infinite;
+}
+
+.animate-anim:hover{
+  animation-play-state: paused;
+}
+/* Animation of comp end */
+
+
+/* Animation Zoom-in-out of circle */
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom-in-out {
+  animation: zoom-in-out 3s ease-in-out infinite;
+}/* circle enimation end */
+
+/* Responsivness start */
+@media screen and (max-width:920px) {
+  .hero{
+    padding: 0 0;
+    background-size: 100%;
+    background-position: center;
+}
+}
+/* Responsivness end */
