@@ -1,0 +1,22 @@
+// Slick-Slider css link
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> 
+
+// Slick slider Link
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+
+<!-- Jquery link -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+// js
+// Slider
+$(document).ready(function(){
+    $('#logo-slider').slick({
+        infinite: true,
+        slidesToShow: 5, 
+        slidesToScroll: 1, 
+        autoplay: true,
+        autoplaySpeed: 2000 
+    });
+});
